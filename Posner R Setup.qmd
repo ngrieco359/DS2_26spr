@@ -1,0 +1,45 @@
+---
+title: "R Setup"
+author: "Michael Posner"
+format: pdf
+editor: visual
+---
+
+I keep this file in my root directory, so that I can quickly set things up when I have to reinstall R / RStudio and/or connect with GitHub
+
+# Connect RStudio and GitHub
+
+```{r}
+# Install https://git-for-windows.github.io/
+
+usethis::use_git_config(user.name = "Prof. Michael Posner", 
+               user.email = "michael.posner@villanova.edu")
+
+usethis::git_default_branch_configure(name = "main")
+
+# Optional: https://www.gitkraken.com/
+
+usethis::create_github_token()  # or https://github.com/settings/tokens
+
+# Copy the token
+gitcreds::gitcreds_set()  # Do this in the console!
+```
+
+# Create a Repo
+
+```{r}
+usethis::create_from_github("https://github.com/maposner/DS2_26spr.git",
+  destdir = "C:\\Users\\mposner\\OneDrive - Villanova University\\Teaching\\DS2\\DS2 S26\\DS Tools")
+```
+
+# Managing Secrets
+
+From [Hadley Wickham's Article](https://r-lib.r-universe.dev/articles/httr/secrets.html)
+
+```{r}
+# Save tokens to Renviron
+file.edit("~/.Renviron")
+
+#add MY_API_TOKEN = “my-secret-token”
+Sys.getenv("MY_API_KEY")
+```
