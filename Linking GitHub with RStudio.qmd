@@ -5,6 +5,9 @@ format:
   html:
     embed-resources: true
 # format: pdf  # for Blackboard
+editor: 
+  markdown: 
+    wrap: sentence
 ---
 
 Link RStudio to your GitHub account by doing the following.
