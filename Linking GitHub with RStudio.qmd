@@ -10,7 +10,7 @@ editor:
     wrap: sentence
 ---
 
-Link RStudio to your GitHub account by doing the following.
+test...Link RStudio to your GitHub account by doing the following.
 These steps follow the guidelines of [HappyGitWithR](https://happygitwithr.com/) (with matching section numbers).
 I suggest using the [`usethis`](https://cran.r-project.org/web/packages/usethis/index.html) package, which automatically runs the commands that you need behind the scenes to complete the installation You will need to install the `usethis` package before you can use it (obviously).
 I have added some comments to each section to help out with the process.
